@@ -11,7 +11,7 @@ export default function HomeBody() {
           return (
             <div className="lg:bg-white h-screen w-[90%] rounded-2xl flex items-center justify-center bg-no-repeat lg:bg-bottom bg-center  bg-contain relative overflow-hidden bg-black opacity-80 lg:opacity-100">
               <div
-                className="h-screen w-[90%] rounded-2xl flex items-center xl:justify-between md:px-28  xl:flex-row flex-col xl:py-0 py-28 justify-center lg:mb-0 mb-36"
+                className="w-[90%] rounded-2xl flex items-center xl:justify-between md:px-28  xl:flex-row flex-col xl:py-0 py-28 justify-center lg:mb-0 mb-36"
               >
                 <div className="mb-10 xl:mt-0 xl:w-[35%] flex flex-col xl:mr-10 md:relative absolute lg:text-black text-white">
                   <div className="text-4xl lg:text-6xl">{data.text1}</div>
