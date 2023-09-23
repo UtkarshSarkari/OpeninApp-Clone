@@ -31,7 +31,7 @@ export const HomeBodyCard = [
         cardNumber: '5',
         text1: 'Loved by',
         text2: '290k+ Creators',
-        videoSrc: './images/vid5.mp4',
+        videoSrc: './images/v5.mp4',
         cardBg: './images/cardBg1.png'
     },
 ]
