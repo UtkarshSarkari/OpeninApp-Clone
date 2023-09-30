@@ -24,7 +24,7 @@ export default function RightSignIn() {
     if (type == "signin") {
       signInWithEmailAndPassword(database, email, password)
         .then(() => {
-          history("/home");
+          history("/dashboard");
           toast.success("Logged in successfully");
         })
         .catch((error) => {
@@ -34,7 +34,7 @@ export default function RightSignIn() {
     } else {
       createUserWithEmailAndPassword(database, email, password)
         .then(() => {
-          history("/home");
+          history("/dashboard");
           toast.success("Registered successfully");
         })
         .catch(() => {
@@ -53,7 +53,7 @@ export default function RightSignIn() {
         localStorage.setItem("name", name);
         localStorage.setItem("email", email);
         localStorage.setItem("profilePic", profilePic);
-        history("/home");
+        history("/dashboard");
         toast.success('Logged in successfully');
       })
       .catch((error) => {
