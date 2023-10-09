@@ -5,8 +5,13 @@ import YTCash from "./YTCash";
 import CallFans from "./CallFans";
 import Affilinks from "./Affilinks";
 import Profile from "./Profile";
+import Footer from "./Footer";
 
-export default function RightBarDash({ selectedLink, openModalSmartLink }) {
+export default function RightBarDash({
+  selectedLink,
+  openModalSmartLink,
+  openModalAffLink,
+}) {
   return (
     <div className="h-screen overflow-y-scroll flex-1 relative">
       <div className="bg-white flex items-center px-4 py-5 justify-between lg:justify-end sticky top-0 z-40">
@@ -77,7 +82,7 @@ export default function RightBarDash({ selectedLink, openModalSmartLink }) {
       </div>
       <div className="">
         {selectedLink === "My Links" ? (
-          <MyLinks />
+          <MyLinks openModalSmartLink={openModalSmartLink} />
         ) : selectedLink === "Barter Box" ? (
           <BarterBox />
         ) : selectedLink === "YT Cash" ? (
@@ -85,10 +90,27 @@ export default function RightBarDash({ selectedLink, openModalSmartLink }) {
         ) : selectedLink === "Call With fans" ? (
           <CallFans />
         ) : selectedLink === "Affilinks" ? (
-          <Affilinks />
+          <Affilinks openModalAffLink={openModalAffLink} />
         ) : selectedLink === "Profile" ? (
           <Profile />
         ) : null}
+      </div>
+      <div className="flex items-center gap-1 font-semibold tracking-wide text-white bg-blue-600 fixed py-2 px-4 rounded-3xl shadow-lg  shadow-blue-500 bottom-20 right-5 lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 4.5v15m7.5-7.5h-15"
+          />
+        </svg>
+        Smartlink
       </div>
     </div>
   );

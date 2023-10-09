@@ -3,7 +3,6 @@ import Header from "../../components/Header/HeaderHome";
 import HomeBody from "./HomeBody";
 
 export default function Home() {
-
   const [isModalOpenSmart, setIsModalOpenSmart] = useState(false);
 
   const openModalSmartLink = () => {
@@ -16,9 +15,7 @@ export default function Home() {
 
   return (
     <div className="">
-      <Header
-        openModalSmartLink={openModalSmartLink}
-      />
+      <Header openModalSmartLink={openModalSmartLink} />
       {isModalOpenSmart && (
         <>
           <div
@@ -77,8 +74,14 @@ export default function Home() {
             </div>
             <div className="text-sm px-10 text-center mb-10">
               By Generating Smartlink , You agree to OpeninApp’s
-              <span className="text-blue-500 cursor-pointer"> Terms of services </span>&{" "}
-              <span className="text-blue-500 cursor-pointer">Privacy Policy</span>
+              <span className="text-blue-500 cursor-pointer">
+                {" "}
+                Terms of services{" "}
+              </span>
+              &{" "}
+              <span className="text-blue-500 cursor-pointer">
+                Privacy Policy
+              </span>
             </div>
           </div>
         </>

@@ -35,7 +35,7 @@ export default function LeftBarDash({ setSelectedLink }) {
         <div className="">
           <div className="flex flex-col gap-4 cursor-pointer">
             {leftDashData.map((item) => (
-              <a
+              <div
                 className={`text-black flex gap-5 items-center justify-start px-6 w-[80%] py-3 ${
                   item.name === selectedItem
                     ? "bg-blue-50 ring-1 ring-blue-500 text-blue-500"
@@ -48,7 +48,7 @@ export default function LeftBarDash({ setSelectedLink }) {
               >
                 {item.svg}
                 {item.name}
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -56,11 +56,17 @@ export default function LeftBarDash({ setSelectedLink }) {
         <div className="bg-[#e7e9fe] w-full h-auto rounded-lg flex flex-col items-center justify-center gap-5 py-4">
           <div className="flex gap-2 items-center">
             <div className="">
-              <img src="./images/download.png" className="h-12 opacity-80" alt="" />
+              <img
+                src="./images/download.png"
+                className="h-12 opacity-80"
+                alt=""
+              />
             </div>
             <div className="">
               <div className="">Get our app now</div>
-              <div className="text-xs text-zinc-400">Download for android and iOS</div>
+              <div className="text-xs text-zinc-400">
+                Download for android and iOS
+              </div>
             </div>
           </div>
           <div className="flex gap-4">
@@ -97,9 +103,14 @@ export default function LeftBarDash({ setSelectedLink }) {
               <img src="./images/link.png" className="h-5" alt="" />
             </div>
           </div>
-          <div className="text-[11px]">Copyright @ 2023 Listed DotFans Pvt. Ltd.</div>
+          <div className="text-[11px]">
+            Copyright @ 2023 Listed DotFans Pvt. Ltd.
+          </div>
           <div className="text-[11px]">All Rights Reserved</div>
-          <div className="text-[11px] text-blue-600"><span className="">Terms & Conditions</span>&nbsp;&nbsp;<span className="">Privacy Policy</span></div>
+          <div className="text-[11px] text-blue-600">
+            <span className="">Terms & Conditions</span>&nbsp;&nbsp;
+            <span className="">Privacy Policy</span>
+          </div>
         </div>
       </div>
     </div>

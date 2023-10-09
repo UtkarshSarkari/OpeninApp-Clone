@@ -21,7 +21,7 @@ export default function RightSignIn() {
       toast.error("Password must be longer than 6 characters");
       return;
     }
-    if (type == "signin") {
+    if (type === "signin") {
       signInWithEmailAndPassword(database, email, password)
         .then(() => {
           history("/dashboard");
@@ -54,10 +54,10 @@ export default function RightSignIn() {
         localStorage.setItem("email", email);
         localStorage.setItem("profilePic", profilePic);
         history("/dashboard");
-        toast.success('Logged in successfully');
+        toast.success("Logged in successfully");
       })
       .catch((error) => {
-        toast.error('An error occured');
+        toast.error("An error occured");
       });
   };
 
@@ -71,10 +71,10 @@ export default function RightSignIn() {
         localStorage.setItem("email", email);
         localStorage.setItem("profilePic", profilePic);
         history("/home");
-        toast.success('Logged in successfully');
+        toast.success("Logged in successfully");
       })
       .catch((error) => {
-        toast.error('An error occured');
+        toast.error("An error occured");
       });
   };
 
@@ -174,11 +174,17 @@ export default function RightSignIn() {
         </div>
 
         <div className="flex items-center justify-between mt-10">
-          <div className="flex items-center justify-center bg-zinc-200 py-2 w-[45%] rounded-lg cursor-pointer" onClick={handleGoogleAuth}>
+          <div
+            className="flex items-center justify-center bg-zinc-200 py-2 w-[45%] rounded-lg cursor-pointer"
+            onClick={handleGoogleAuth}
+          >
             <img src="./images/google.png" height={15} width={15} alt="" />
             <div className="ml-2">Google</div>
           </div>
-          <div className="flex w-[45%] items-center bg-zinc-200 py-2 justify-center rounded-lg cursor-pointer" onClick={handleGithubAuth}>
+          <div
+            className="flex w-[45%] items-center bg-zinc-200 py-2 justify-center rounded-lg cursor-pointer"
+            onClick={handleGithubAuth}
+          >
             <img src="./images/github.png" height={15} width={15} alt="" />
             <div className="ml-2">GitHub</div>
           </div>
